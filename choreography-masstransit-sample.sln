@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Choreography.CreditService", "Choreography.CreditService\Choreography.CreditService.csproj", "{3123DD83-8026-4A9B-A8FA-D9B3A0F12DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Choreography.EvaluationService", "Choreography.EvaluationService\Choreography.EvaluationService.csproj", "{A664FCDF-4CD3-429C-AA44-07CF3DD96BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Choreography.SharedKernel", "Choreography.SharedKernel\Choreography.SharedKernel.csproj", "{D03C08C5-DD8A-48E4-BCFC-19A8B991C45E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21F9E8B9-DD5D-4029-998F-AC9D2D8E78E1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Choreography.MoneyTransferService", "Choreography.MoneyTransferService\Choreography.MoneyTransferService.csproj", "{AF2FF5EF-3795-4A5F-A251-F8AF0F9F1A75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3123DD83-8026-4A9B-A8FA-D9B3A0F12DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3123DD83-8026-4A9B-A8FA-D9B3A0F12DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3123DD83-8026-4A9B-A8FA-D9B3A0F12DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3123DD83-8026-4A9B-A8FA-D9B3A0F12DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A664FCDF-4CD3-429C-AA44-07CF3DD96BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A664FCDF-4CD3-429C-AA44-07CF3DD96BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A664FCDF-4CD3-429C-AA44-07CF3DD96BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A664FCDF-4CD3-429C-AA44-07CF3DD96BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03C08C5-DD8A-48E4-BCFC-19A8B991C45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03C08C5-DD8A-48E4-BCFC-19A8B991C45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03C08C5-DD8A-48E4-BCFC-19A8B991C45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03C08C5-DD8A-48E4-BCFC-19A8B991C45E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF2FF5EF-3795-4A5F-A251-F8AF0F9F1A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF2FF5EF-3795-4A5F-A251-F8AF0F9F1A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF2FF5EF-3795-4A5F-A251-F8AF0F9F1A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2FF5EF-3795-4A5F-A251-F8AF0F9F1A75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86FBE7F0-3F64-4D92-924D-345CA044C6D3}
+	EndGlobalSection
+EndGlobal
