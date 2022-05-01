@@ -1,3 +1,4 @@
+using Choreography.MoneyTransferService.Consumer;
 using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,16 +7,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddMassTransit(x => x.UsingRabbitMq((context, cfg) =>
+builder.Services.AddMassTransit(x =>
 {
-    cfg.Host("192.168.178.35", "choreography", h =>
+    //EvaluationCompletedConsumer
+    x.AddConsumer<EvaluationCompletedConsumer>();
+    x.UsingRabbitMq((context, cfg) =>
     {
-        h.Username("tadev");
-        h.Password("tadev");
-    });
+        cfg.ReceiveEndpoint("moneytransfer-evaluationcompleted-subscriber-queue", c =>
+        {
+            c.ConfigureConsumer<EvaluationCompletedConsumer>(context);
+        });
 
-    cfg.ConfigureEndpoints(context);
-})
+        cfg.Host("192.168.178.35", "choreography", h =>
+        {
+            h.Username("tadev");
+            h.Password("tadev");
+        });
+
+        cfg.ConfigureEndpoints(context);
+    });
+}
 );
 
 var app = builder.Build();

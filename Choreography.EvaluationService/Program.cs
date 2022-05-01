@@ -11,12 +11,18 @@ builder.Services.AddControllers();
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<CreditDemandCreatedConsumer>();
+    x.AddConsumer<MoneyTransferFailedConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.ReceiveEndpoint("evaluation-demandcreated-subscriber-queue", c =>
         {
             c.ConfigureConsumer<CreditDemandCreatedConsumer>(context);
+        });
+
+        cfg.ReceiveEndpoint("evaluation-moneytransferfailed-subscriber-queue", c =>
+        {
+            c.ConfigureConsumer<MoneyTransferFailedConsumer>(context);
         });
 
         cfg.Host("192.168.178.35", "choreography", h =>

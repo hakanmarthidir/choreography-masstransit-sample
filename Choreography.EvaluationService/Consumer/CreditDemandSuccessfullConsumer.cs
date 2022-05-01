@@ -51,8 +51,6 @@ namespace Choreography.EvaluationService.Consumer
                         UserId = message.UserId,
                     }).ConfigureAwait(false);
                 }
-
-
             }
         }
     }
