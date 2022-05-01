@@ -14,7 +14,7 @@ builder.Services.AddMassTransit(x =>
 
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.ReceiveEndpoint("evaluation-subscriber-queue", c =>
+        cfg.ReceiveEndpoint("evaluation-demandcreated-subscriber-queue", c =>
         {
             c.ConfigureConsumer<CreditDemandCreatedConsumer>(context);
         });
